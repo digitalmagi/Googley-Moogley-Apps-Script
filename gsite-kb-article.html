@@ -1,0 +1,334 @@
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("upToTopBtn").style.display = "block";
+    document.getElementById("BackBtn").style.display = "block";
+  } else {
+    document.getElementById("upToTopBtn").style.display = "none";
+    document.getElementById("BackBtn").style.display = "block";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document //
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function backPage() {
+  window.history.back("-1"); // Goes to last page visited
+}
+    
+</script>
+
+<style>
+
+/** Scroll Bar Customization **/
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/** Animation Code **/
+
+@keyframes bounce {
+        0%   { transform: scale(1,1)    translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1) translateY(-25px); }
+        50%  { transform: scale(1,1)    translateY(0); }
+        57%  { transform: scale(1,1)    translateY(-7px); }
+        64%  { transform: scale(1,1)    translateY(0); }
+        100% { transform: scale(1,1)    translateY(0); }
+    }
+
+/** Button Display Code **/
+
+#upToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  top: 90px; /* Place the button at the bottom of the page */
+  right: 2%; /* Place the button 30px from the right */
+  width: 40px; /* Max width of button */
+  height: 40px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #3d85c6; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  padding: 5 5 5 5px;
+  text-align: center;
+}
+
+#upToTopBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#BackBtn {
+  display: inline-block; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  top: 35px; /* Place the button at the top of the page */
+  right: 2%; /* Place the button 30px from the right */
+  width: 40px; /* Max width of button */
+  height: 40px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #3d85c6; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 21px; /* Increase font size */
+  padding: 5 5 5 5px;
+  text-align: center;
+}
+
+#BackBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.BackButton {
+  text-align: center;
+  margin: auto;
+}
+
+.UpToTopButton {
+  text-align: center;
+  margin: auto;
+}
+
+/** Styling for Text **/
+
+h1 {
+    font-family: Helvetica, sans-serif, inherit;
+}
+    
+h2 {
+    font-family: Helvetica, sans-serif, inherit;
+}
+
+h3 {
+    font-family: Helvetica, sans-serif, inherit;
+}
+
+h4 {
+  font-family: Helvetica, sans-serif, inherit;
+}
+
+p {
+  font-family: Arial, sans-serif, inherit;
+  font-size: 14pt;
+}
+
+ol, ul, li {
+  font-family: Arial, sans-serif, inherit;
+  font-size: 14pt;
+}
+
+/** Collapsible button js code **/
+    
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/** Collapsible button onevent click and hover color js code **/
+    
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/** Collapsible content styling js code **/
+    
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+    
+/** Text Change **/
+    
+.emergency-red {
+  color: #FF0000;
+  font-weight: bold;
+}
+    
+.important-bold {
+  font-weight: bold;
+}
+
+.hype-green {
+  color: #00B32C;
+  font-weight: bold;
+}
+
+.burgundy-bold {
+  color:#85200c;
+  font-weight: bold;
+}
+
+.blood-red {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.sesame-brown {
+  color: #b45f06;
+  font-weight: bold;
+}
+
+.forest-green {
+  color: #38761d;
+  font-weight: bold;
+}
+
+.dark-gold {
+  color: #bf9000;
+  font-weight: bold;
+}
+
+.yo-listen-up-blue {
+  color: #1155cc;
+  font-weight: bold;
+}
+
+.purple-haze {
+  color: #674ea7;
+  font-weight: bold;
+}
+
+.pinkish {
+  color: #c27ba0;
+  font-weight: bold;
+}
+
+.google-blue {
+  color: #4a86e8;
+  font-weight: bold;
+}
+
+.push {
+  .text-indent: 50px;
+}
+
+/** Table Styling Per Table **/
+
+tr, th, td#table-of-contents-articles-table {
+  background-color: #FFFFFF;
+}
+
+table#table-of-contents-articles-table {
+  width: 65%;
+}
+
+/** Table Master Styling **/
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+        
+td, th {
+  border: 1px solid #cccccc;
+  font-weight: normal;
+  padding: 8px;
+  text-align: left;
+}
+        
+tr:nth-child(1) {
+  background-color: #f1f1f1;
+}
+
+tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+/** Collapsible Style **/
+
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+</style>
+
+<button onclick="topFunction()" id="upToTopBtn" title="Go To The Top Of The Article" link>
+  🡱
+</button>
+
+<button onclick="backPage()" id="BackBtn" title="Back To Previous Page">
+  🡰
+</button>
+
+<body style="width: 90%; padding-top: 25px;">
+
+<h1 style="font-family:Helvetica; font-weight:900;">PAGINATION > NAME OF PAGE</h1>
+<p>VERSION CONTROL / LAST UPDATED</p>
+<h2 style="font-family:Helvetica">Title</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+&nbsp;
+
+<p>
+<table id="table-of-contents-articles-table">
+  <thead>
+    <tr>
+      <th>
+        <h4>Table Of Contents</h4>
+          <li><a href="#test-1" target="_self">Test Header 1</a></li>
+          <li><a href="#test-2" target="_self">Test Header 2</a></li>
+          <li><a href="#test-3" target="_self">Test Header 3</a></li>
+      </th>
+      <th>
+          <h4>Related Articles</h4>
+            <li>Related Article 1</li>
+            <li>Related Article 2</li>
+            <li>Related Article 3</li>
+      </th>
+    </thead>
+  </table>
+</p>
+&nbsp;
+
+<h2 style="font-family:Helvetica" id="test-1" target="_self">Test Header 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+&nbsp;
+
+<h2 style="font-family:Helvetica" id="test-2" target="_self">Test Header 2</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+&nbsp;
+
+<h2 style="font-family:Helvetica" id="test-3" target="_self">Test Header 3</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+&nbsp;
+</body>
